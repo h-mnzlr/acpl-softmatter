@@ -11,10 +11,10 @@ setuptools.setup(
     name="soft_matter",
     author="Heiko Menzler",
     author_email="heikogeorg.menzler@stud.uni-goettingen.de",
-    description="Statisical Physics in soft matter",
+    description="Statistical Physics in soft matter",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
+    package_dir={"": "code"},
+    packages=setuptools.find_packages(where="code"),
     python_requires=">=3.10.8",
 )

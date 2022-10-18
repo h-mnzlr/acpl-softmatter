@@ -13,10 +13,6 @@
 ##### `notebooks/`
 Contains the notebooks that implement the exercises. Notebooks are called `.sync.ipynb` due to workflow reasons (`jupyter_ascending` Jupyter server plugin).
 
-Exercise 1: `ising_model.sync.ipynb`
-Exercise 2: `1_random_matrices.ipynb` and `2_random_matrices.ipynb`
-Exercise 3: `anderson_model.ipynb`
-
 ##### `code/`
 Contains all the packages dynamically linked in the environment. Contains modules with self-implemented helper functions to use in the notebooks.
 
