@@ -185,15 +185,40 @@ This we can use to calculate the local free energies by numerically integrating 
 
 \begin{figure}[htpb]
     \centering
+    \includegraphics[width=0.8\textwidth]{../figures/ex1_overlap_umbrella.pdf}
+    \caption{
+        In this graphic we show that our grid of umbrella ensembles generate overlapping distributions in the junction point $r_j$.
+        Every color corresponds to an independent umbrella ensemble run for \num{e6} MC sweeps, discarding the first \num{e5}.
+        The constraint for the individual ensembles varies in steps of \SI{2e-2}{\charlength} from \qtyrange{.2}{2}{\charlength} and shown are \num{90} distributions in total.
+    }
+    \label{fig:ex1_overlap_umbrella}
+\end{figure}
+
+\begin{figure}[htpb]
+    \centering
     \includegraphics[width=0.8\textwidth]{../figures/ex1_free_energy_profile.pdf}
-    \caption{}
+    \caption{
+        Free Energy profile calculated from the umbrella sampling plotted against the junction point of the copolymer.
+        The bottom of the basin and the top of the barrier are marked by horizontal red lines.
+        $\Delta F$ as the difference between these lines is \SI{3.56}{\charenergy}.
+    }
     \label{fig:ex1_free_energy_profile}
 \end{figure}
 
-To calculate the free energy profile of the system we can use -- as mentioned in the section above --
-From the results of the previous section we can
+To calculate the free energy profile of the system we can use -- as mentioned in the section above -- the umbrella sampling at different locations along a suitable reaction coordinate.
+That suitable reaction coordinate in our case is the junction point of the copolymer.
+From the results of the previous section we know that we can calculate the Free energy via the values of the junction point in the umbrella ensemble.
+\par
 
+Firstly we need to show that the grid we used for the umbrella sampling is sufficiently small, s.~t.~the local free energy does not vary too much from site to site on the grid.
+We can achieve this by checking that the umbrella ensembles generate overlapping distributions in the reaction coordinate.
+In Figure \ref{fig:ex1_overlap_umbrella} we can clearly see, that this is the case for our experiment.
+\par
 
+Now we can use the umbrella ensembles to calculate the local Free Energy along the reaction coordinate using the formula derived earlier.
+In Figure \ref{fig:ex1_free_energy_profile} we can see the results of these calculations.
+In the figure the height of the barrier is already marked.
+It is $\Delta F = \SI{3.56}{\charenergy}$.
 
 
 \ifSubfilesClassLoaded{
