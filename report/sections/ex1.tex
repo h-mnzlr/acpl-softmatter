@@ -101,7 +101,9 @@ Doing so we obtain $D = \SI{8.6e-6}{\charlength\squared\per\mcstep}$.
     \centering
     \includegraphics[width=0.8\textwidth]{../figures/ex1_partial_density_profile.pdf}
     \caption{
-        Partial density profile.
+        Partial density profile of the two sub chains of the polymer plotted against the radius.
+        Simulations were executed over \num{e6} MC sweeps while the first \num{e5} were discarded.
+        The configuration's segments were weighted as if we were only looking at a singular thread leaving the micelle.  
     }
     \label{fig:ex1_partial_density_profile}
 \end{figure}
@@ -177,6 +179,20 @@ But we also know
 .\] 
 
 This we can use to calculate the local free energies by numerically integrating $\dv[]{F}{r} $.
+
+
+\subsection{Free Energy Barrier}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../figures/ex1_free_energy_profile.pdf}
+    \caption{}
+    \label{fig:ex1_free_energy_profile}
+\end{figure}
+
+To calculate the free energy profile of the system we can use -- as mentioned in the section above --
+From the results of the previous section we can
+
 
 
 
