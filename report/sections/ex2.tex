@@ -1,0 +1,32 @@
+\documentclass[../main.tex]{subfiles}
+
+
+\begin{document}
+\section{Forward Flux Sampling}
+
+\subsection{Markovian Dynamics of the Junction Point $r_j$?}
+
+If we describe the configurations of our copolymers by their complete set of segment positions we get true continuous time markovian dynamics.
+This is due to the fact that we don't have any "hidden" variables and as such the future time evolution of the system depends only on the configuration of the current state.
+Therefore -- as long as we ensure detailed balance -- we get the characteristic decay of the current configuration over some relaxation time $\tau_r$ that is connected to the largest eigenvalue of the transfer matrix.
+\par
+
+As we have seen, the junction point can be used as a reaction coordinate that characterizes the escape of the copolymer from the micelle.
+We can therefore ask ourselves if it would be sufficient to only simulate the reaction coordinate with a detailed balance algorithm to obtain correct dynamics.
+This would be a severe saving in computational resources and would allow us to study the system much more thoroughly.
+Unfortunately this is not the case.
+\par
+
+If we considered the system's configuration to consist only of the junction point, we would discard the information of the state that corresponds to the sub chains.
+The problem is easy to spot if one considers that the value of the junction point is symmetric under exchange of the sub chains.
+Obviously the exchanged sub chains have to lead to different dynamics in the external field.
+Therefore the future evolution of the system would not only be conditioned on the current configuration and the dynamics are not markovian.
+\par
+
+\ifSubfilesClassLoaded{
+	% if it's compiled alone
+}{
+	% if it's compiled in the main file
+}
+\end{document}
+
